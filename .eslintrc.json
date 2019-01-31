@@ -1,0 +1,17 @@
+{
+  "extends": ["stylelint-config-wordpress"],
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "_": false,
+    "Backbone": false,
+    "jQuery": false,
+    "JSON": false,
+    "wp": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 5
+  }
+}

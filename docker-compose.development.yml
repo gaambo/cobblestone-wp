@@ -1,0 +1,48 @@
+version: "3.1"
+
+services:
+  wordpress:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      args:
+        - APACHE_DOCUMENT_ROOT=/var/www/html/web
+    restart: always
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=1
+
+  mysql:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./data/database.sql:/docker-entrypoint-initdb.d/dump.sql
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: test123
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   links:
+  #     - mysql:db
+  #   ports:
+  #     - 8181:80
+  #   environment:
+  #     MYSQL_USERNAME: root
+  #     MYSQL_ROOT_PASSWORD: test123
+  #   depends_on:
+  #     - mysql
+  # wpcli:
+  #   image: wordpress:cli-2
+  #   restart: always
+  #   volumes:
+  #     - .:/var/www/html
+  #   depends_on:
+  #     - binder
+  #   user: '33:33'
+  #   entrypoint: wp
+volumes:
+  db-data:

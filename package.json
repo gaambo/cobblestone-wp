@@ -1,0 +1,21 @@
+{
+  "name": "cobblestone",
+  "author": {
+    "name": "Fabian Todt",
+    "email": "fabian@fabiantodt.at",
+    "url": "http://fabiantodt.at"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/gaambo/cobblestone"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-wordpress": "^2.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-wordpress": "^13.1.0"
+  }
+}
