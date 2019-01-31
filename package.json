@@ -14,8 +14,12 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.12.1",
-    "eslint-config-wordpress": "^2.0.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.3",
     "stylelint": "^9.10.1",
-    "stylelint-config-wordpress": "^13.1.0"
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.6"
   }
 }
