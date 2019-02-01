@@ -14,7 +14,7 @@ use Roots\WPConfig\Config;
 $root_dir = dirname(__DIR__);
 
 /** @var string Document Root */
-$webroot_dir = $root_dir . '/web';
+$webroot_dir = $root_dir . '/public';
 
 /**
  * Expose global env() function from oscarotero/env
@@ -26,8 +26,8 @@ Env::init();
  */
 $dotenv = new Dotenv\Dotenv($root_dir);
 if (file_exists($root_dir . '/.env')) {
-    $dotenv->load();
-    $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL']);
+	$dotenv->load();
+	$dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL']);
 }
 
 /**
@@ -92,7 +92,7 @@ ini_set('display_errors', 0);
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
 if (file_exists($env_config)) {
-    require_once $env_config;
+	require_once $env_config;
 }
 
 Config::apply();
@@ -101,5 +101,5 @@ Config::apply();
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
-    define('ABSPATH', $webroot_dir . '/wp/');
+	define('ABSPATH', $webroot_dir . '/wp/');
 }
