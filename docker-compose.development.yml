@@ -6,7 +6,7 @@ services:
       context: ./docker
       dockerfile: Dockerfile
       args:
-        - APACHE_DOCUMENT_ROOT=/var/www/html/web
+        - APACHE_DOCUMENT_ROOT=/var/www/html/public
     restart: always
     volumes:
       - .:/var/www/html

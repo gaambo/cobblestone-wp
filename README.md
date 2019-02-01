@@ -76,12 +76,12 @@ Cobblestone provides multiple "flavors" for different development requirements a
    $ composer install
    $ npm install
    ```
-4. Add theme(s) in `web/app/themes/` as you would for a normal WordPress site. For installing themes and plugins from the WordPress repository see the [Bedrock documentation about using composer for WordPress](https://roots.io/bedrock/docs/composer/).
+4. Add theme(s) in `public/app/themes/` as you would for a normal WordPress site. For installing themes and plugins from the WordPress repository see the [Bedrock documentation about using composer for WordPress](https://roots.io/bedrock/docs/composer/).
 5. If developing a custom theme or plugin which you want to include in the repository exclude it in `.gitignore`.
 6. If developing a custom theme or plugin which you want to have JavaScript linting available exclude it in `.eslintignore`.
 7. If developing a custom theme or plugin which you want to have Style (CSS/SCSS) linting available exclude it in `.stylelintignore`.
 8. If developing a custom theme or plugin which you want to have PHP linting available include it in `phpcs.xml` via `<include-pattern>PATH</include-pattern>`.
-9. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/web/`
+9. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/public/`
 10. Access WordPress admin at `https://example.com/wp/wp-admin/`
 
 ## Documentation
