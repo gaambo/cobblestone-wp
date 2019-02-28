@@ -1,0 +1,24 @@
+{
+	"stylesheets": [
+		{
+			"source": "theme/assets/css/*.scss",
+			"destination": "public/app/themes/obsidian/assets/css",
+			"prefixer": {
+				"browsers": ["last 2 versions", "> 2%"]
+			},
+			"sass": {
+				"outputStyle": "compressed"
+			}
+		}
+	],
+	"scripts": [
+		{
+			"source": ["theme/assets/js/main.js"],
+			"destination": "public/app/themes/obsidian/assets/js",
+			"name": "bundle",
+			"babel": {
+				"presets": ["@babel/env"]
+			}
+		}
+	]
+}

@@ -98,6 +98,17 @@ if (file_exists($env_config)) {
 Config::apply();
 
 /**
+ * Path Constants
+ */
+define( 'SRCPATH', $root_dir . '/src' );
+
+/** 
+ * Obsidian Variables
+ */
+$composer_json = json_decode( file_get_contents( $root_dir . '/composer.json' ), true );
+define('OBSIDIAN_VERSION', $composer_json['version'] );
+
+/**
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {

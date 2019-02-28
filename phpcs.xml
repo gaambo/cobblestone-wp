@@ -13,6 +13,8 @@
   <exclude-pattern>vendor/</exclude-pattern>
   <exclude-pattern>public/app/plugins/</exclude-pattern>
   <exclude-pattern>public/app/themes/</exclude-pattern>
+  <include-pattern>public/app/themes/obsidian/</include-pattern>
+  <include-pattern>src/</include-pattern>
 
   <!-- Show colors in console -->
   <arg value="-colors"/>
@@ -20,6 +22,14 @@
   <!-- Show sniff codes in all reports -->
   <arg value="ns"/>
 
-  <!-- Use PSR-2 as a base -->
-  <rule ref="WordPress-Core"/>
+  <!-- Use WordPress as a base -->
+  <rule ref="WordPress-Core">
+		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
+		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
+		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+		<exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeKeyFound" />
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning" />
+	</rule>
 </ruleset>

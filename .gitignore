@@ -37,5 +37,7 @@ wp-cli.local.yml
 !/data/.gitkeep
 
 # Custom Plugins & Themes
-#!public/app/themes/custom-theme
+!public/app/themes/obsidian
+public/app/themes/obsidian/assets/js
+public/app/themes/obsidian/assets/css
 #!public/app/plugins/custom-plugin 
