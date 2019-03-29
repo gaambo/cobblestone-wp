@@ -3,7 +3,7 @@ version: "3.1"
 services:
   wordpress:
     build:
-      context: ./docker
+      context: ./build
       dockerfile: Dockerfile
       args:
         - APACHE_DOCUMENT_ROOT=/var/www/html/public
@@ -20,7 +20,6 @@ services:
     restart: always
     volumes:
       - db-data:/var/lib/mysql
-      - ./data/database.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: test123
