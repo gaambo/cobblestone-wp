@@ -32,9 +32,6 @@ wp-cli.local.yml
 .vscode
 .idea
 
-# Data
-/data/*
-!/data/.gitkeep
 
 # Custom Plugins & Themes
 #!public/app/themes/custom-theme
