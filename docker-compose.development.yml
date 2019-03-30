@@ -20,7 +20,7 @@ services:
     volumes:
       - .:/var/www/html
     depends_on:
-      - binder
+      - wordpress
     user: "33:33"
     entrypoint: wp
   mysql:
