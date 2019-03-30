@@ -14,7 +14,15 @@ services:
       - 80:80
     environment:
       XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=1
-
+  wpcli:
+    image: wordpress:cli-2
+    restart: always
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - binder
+    user: "33:33"
+    entrypoint: wp
   mysql:
     image: mysql:5.7
     restart: always
