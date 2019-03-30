@@ -18,7 +18,7 @@ We regularly sync changes from Bedrock to this repository and update WordPress v
 - [Docker Compose](https://docs.docker.com/compose/) for local developing (and for making deployment easier) including [Xdebug](https://xdebug.org/)
 - A [WP-CLI](https://wp-cli.org/) Docker container
 - JavaScript linting via [ESLint](https://eslint.org/) configuration
-- PHP linting with [WordPress Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) via [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer)
+- PHP linting with [PSR2 Standards](https://www.php-fig.org/psr/psr-2/) via [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer)
 - Different [flavors](#flavors) for different development requirements
 - Deploying via [Deployer](https://deployer.org/) (coming soon)
 - [Snippets](https://github.com/gaambo/cobblestone-wp/wiki/Snippets) for often used tools and plugins (e.g. installing of WordPress premium plugins like ACF Pro)
