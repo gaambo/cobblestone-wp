@@ -12,9 +12,9 @@ namespace Obsidian\Roles;
  */
 function init_roles()
 {
-	remove_unused_roles();
-	init_special_role();
-	add_admin_capabilities();
+    remove_unused_roles();
+    init_special_role();
+    add_admin_capabilities();
 }
 
 /**
@@ -24,8 +24,8 @@ function init_roles()
  */
 function remove_unused_roles()
 {
-	// remove default unused roles
-	remove_role('subscriber');
+    // remove default unused roles
+    remove_role('subscriber');
 }
 
 /**
@@ -38,34 +38,34 @@ function remove_unused_roles()
  */
 function init_special_role()
 {
-	$special_role = get_role('obsidian-special');
-	if (! $special_role) {
-		$special_role = add_role('obsidian-special', __('Spezielle Rolle', 'obsidian'), array());
-	}
-	$special_capabilities = array(
-		'read'                   => true,
-		'level_1'                => true,
-		'upload_files'           => true,
-		'manage_privacy_options' => true,
-		// jobs
-		'edit_job'               => true,
-		'edit_jobs'              => true,
-		'edit_others_jobs'       => true,
-		'edit_published_jobs'    => true,
-		'publish_jobs'           => true,
-		'read_job'               => true,
-		'read_private_jobs'      => true,
-		'delete_job'             => true,
-		'delete_jobs'            => true,
-		'delete_others_jobs'     => true,
-		'delete_published_jobs'  => true,
-		'delete_private_jobs'    => true,
-	);
-	foreach ($special_capabilities as $cap => $allow) {
-		$special_role->add_cap($cap, $allow);
-	}
+    $special_role = get_role('obsidian-special');
+    if (! $special_role) {
+        $special_role = add_role('obsidian-special', __('Spezielle Rolle', 'obsidian'), array());
+    }
+    $special_capabilities = array(
+        'read'                   => true,
+        'level_1'                => true,
+        'upload_files'           => true,
+        'manage_privacy_options' => true,
+        // jobs
+        'edit_job'               => true,
+        'edit_jobs'              => true,
+        'edit_others_jobs'       => true,
+        'edit_published_jobs'    => true,
+        'publish_jobs'           => true,
+        'read_job'               => true,
+        'read_private_jobs'      => true,
+        'delete_job'             => true,
+        'delete_jobs'            => true,
+        'delete_others_jobs'     => true,
+        'delete_published_jobs'  => true,
+        'delete_private_jobs'    => true,
+    );
+    foreach ($special_capabilities as $cap => $allow) {
+        $special_role->add_cap($cap, $allow);
+    }
 
-	// maybe delete some old capabilities
+    // maybe delete some old capabilities
 }
 
 /**
@@ -75,18 +75,18 @@ function init_special_role()
  */
 function add_admin_capabilities()
 {
-	$admin = get_role('administrator');
-	$admin_capabilities = array(
-		// jobs
-		'edit_job',
-		'edit_jobs',
-		'edit_others_jobs',
-		'publish_jobs',
-		'read_job',
-		'read_private_jobs',
-		'delete_job',
-	);
-	foreach ($admin_capabilities as $cap) {
-		$admin->add_cap($cap, true);
-	}
+    $admin = get_role('administrator');
+    $admin_capabilities = array(
+        // jobs
+        'edit_job',
+        'edit_jobs',
+        'edit_others_jobs',
+        'publish_jobs',
+        'read_job',
+        'read_private_jobs',
+        'delete_job',
+    );
+    foreach ($admin_capabilities as $cap) {
+        $admin->add_cap($cap, true);
+    }
 }

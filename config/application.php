@@ -26,8 +26,8 @@ Env::init();
  */
 $dotenv = new Dotenv\Dotenv($root_dir);
 if (file_exists($root_dir . '/.env')) {
-	$dotenv->load();
-	$dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL']);
+    $dotenv->load();
+    $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL']);
 }
 
 /**
@@ -92,7 +92,7 @@ ini_set('display_errors', 0);
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
 if (file_exists($env_config)) {
-	require_once $env_config;
+    require_once $env_config;
 }
 
 Config::apply();
@@ -100,17 +100,17 @@ Config::apply();
 /**
  * Path Constants
  */
-define( 'SRCPATH', $root_dir . '/src' );
+define('SRCPATH', $root_dir . '/src');
 
-/** 
+/**
  * Obsidian Variables
  */
-$composer_json = json_decode( file_get_contents( $root_dir . '/composer.json' ), true );
-define('OBSIDIAN_VERSION', $composer_json['version'] );
+$composer_json = json_decode(file_get_contents($root_dir . '/composer.json'), true);
+define('OBSIDIAN_VERSION', $composer_json['version']);
 
 /**
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
-	define('ABSPATH', $webroot_dir . '/wp/');
+    define('ABSPATH', $webroot_dir . '/wp/');
 }

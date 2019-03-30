@@ -28,4 +28,4 @@ $context = Timber::get_context();
 $post = new Post();
 $context['post'] = $post;
 $context['title'] = $post->title;
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render(array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context);
