@@ -1,4 +1,4 @@
-# [WordPress Cobblestone](https://gaambo.gitlab.io/cobblestone)
+# [WordPress Cobblestone](https://github.com/gaambo/cobblestone-wp)
 
 Cobblestone is heavily based on [Bedrock](https://roots.io/bedrock/) which is a modern WordPress stack that helps you get started with the best development tools and project structure.
 
@@ -9,7 +9,7 @@ We regularly sync changes from Bedrock to this repository and update WordPress v
 ## Quick Links
 
 - [Installation](#Installation)
-- [Getting Started](https://gitlab.com/gaambo/cobblestone/wikis/Getting-Started)
+- [Getting Started](https://github.com/gaambo/cobblestone-wp/wiki/Getting-Started)
 
 ## Features
 
@@ -21,7 +21,7 @@ We regularly sync changes from Bedrock to this repository and update WordPress v
 - PHP linting with [WordPress Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) via [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer)
 - Different [flavors](#flavors) for different development requirements
 - Deploying via [Deployer](https://deployer.org/) (coming soon)
-- [Snippets](https://gitlab.com/gaambo/cobblestone/snippets) for often used tools and plugins (e.g. installing of WordPress premium plugins like ACF Pro)
+- [Snippets](https://github.com/gaambo/cobblestone-wp/wiki/Snippets) for often used tools and plugins (e.g. installing of WordPress premium plugins like ACF Pro)
 
 ### Original Bedrock Features:
 
@@ -37,7 +37,6 @@ Cobblestone provides multiple "flavors" for different development requirements a
 
 - **Default** (_master branch_): A blank slate for any WordPress development without a theme, plugins or anything else. Just start from scratch.
 - **Obsidian** (_obsidian branch_): Cobblestone boilerplate combined with a boilerplate theme based on [Timber](https://github.com/timber/timber) making usage of [Gulp](http://gulpjs.com/) with [LibSass](http://sass-lang.com/), [Babel](https://babeljs.io/), [PostCSS](https://github.com/postcss/postcss), [BrowserSync](https://www.browsersync.io/) etc. Perfect for custom developed themes and working with [Advanced Custom Fields](https://www.advancedcustomfields.com/).
-- **Chest** (_chest branch_): Cobblestone boilerplate combined with [GeneratePress](https://generatepress.com/) and [Elementor](https://elementor.com) for building websites with a page builder.
 
 ## Requirements
 
@@ -54,7 +53,7 @@ Cobblestone provides multiple "flavors" for different development requirements a
    ```
    b. Clone git repository
    ```sh
-   $ git clone https://gitlab.com/gaambo/cobblestone website-dir
+   $ git clone https://github.com/gaambo/cobblestone-wp website-dir
    $ cd website-dir && rm -rf .git
    $ git init
    ```
@@ -86,12 +85,12 @@ Cobblestone provides multiple "flavors" for different development requirements a
 
 ## Documentation
 
-Cobblestone specific documentation can be found in our [GitLab wiki](https://gitlab.com/gaambo/cobblestone/wikis)
+Cobblestone specific documentation can be found in our [GitHub wiki](https://github.com/gaambo/cobblestone-wp/wiki)
 Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
 
 ## Contributing
 
-Contributions are welcome from everyone. Just open an [issue](https://gitlab.com/gaambo/cobblestone/issues) or contact me.
+Contributions are welcome from everyone. Just open an [issue](https://github.com/gaambo/cobblestone-wp/issues) or contact me.
 
 Bedrock has its own [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md).
 
