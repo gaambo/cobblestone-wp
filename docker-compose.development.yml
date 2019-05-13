@@ -44,11 +44,10 @@ services:
   #     - mysql
   # wpcli:
   #   image: wordpress:cli-2
-  #   restart: always
   #   volumes:
   #     - .:/var/www/html
   #   depends_on:
-  #     - binder
+  #     - wordpress
   #   user: '33:33'
   #   entrypoint: wp
 volumes:
