@@ -38,4 +38,5 @@ wp-cli.local.yml
 public/app/themes/obsidian/assets/js
 public/app/themes/obsidian/assets/css
 public/app/themes/obsidian/languages
+!public/app/mu-plugins/core-functionality
 #!public/app/plugins/custom-plugin 
